@@ -149,7 +149,7 @@ def detect_head_drooping(face_landmarks, frame):
                 print("Head drop ended")
 
 def play_sound(sound):
-    sound = AudioSegment.from_file(sound+".mp3", format="mp3")
+    sound = AudioSegment.from_file("../../../../assets/audios/"+sound+".mp3", format="mp3")
     return simpleaudio.play_buffer(
         sound.raw_data,
         num_channels=sound.channels,
@@ -180,7 +180,7 @@ def handle_sleepy_user():
     global has_queried
     if not has_queried:
         has_queried = True
-        new_speech_handler.say("Driver, please provide a status update, any response is okay?")
+        new_speech_handler.say("Driver, please provide a status update, any response is okay")
         response = new_speech_handler.listen_for_response()
         if not response:
             handle_alert()
