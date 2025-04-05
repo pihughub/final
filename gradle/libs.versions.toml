@@ -1,0 +1,18 @@
+[versions]
+android-gradle-plugin = "8.9.1"
+kotlin = "1.9.10"
+chaquopy = "16.0.0"
+core-ktx = "1.12.0"
+appcompat = "1.6.1"
+material = "1.10.0"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+chaquopy = { id = "com.chaquo.python", version.ref = "chaquopy" }
+
+[libraries]
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+chaquopy = { group = "com.chaquo.python", name = "chaquopy", version.ref = "chaquopy" }
